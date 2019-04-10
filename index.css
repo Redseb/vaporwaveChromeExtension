@@ -1,0 +1,11 @@
+body {
+    background-image: url('images/water.jpg');
+}
+
+#output {
+    opacity: 0;
+}
+
+button {
+    margin-top: 5px;
+}
