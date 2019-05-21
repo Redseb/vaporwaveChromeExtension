@@ -11,8 +11,6 @@ chrome.runtime.onInstalled.addListener(function () {
 chrome.contextMenus.onClicked.addListener(function (clickData) {
     if (clickData.menuItemId == "vaporwavise" && clickData.selectionText) {
         let vaporwaveText = vaporwavise(clickData.selectionText);
-        // copyToClipboard(vaporwaveText);
-        // this.clipboardData.setData('text/plain', vaporwaveText);
         copyTextToClipboard(vaporwaveText);
     }
 });
@@ -43,7 +41,7 @@ function copyTextToClipboard(text) {
     document.body.removeChild(copyFrom);
   }
 
-function vaporwavise(input) {
+function vaporwavise(input) { //TODO: Update this function to work with more characters than just letters
     var tempInput = "";
     for (var i = 0; i < input.length; i++) {
         switch (input.charAt(i)) {
